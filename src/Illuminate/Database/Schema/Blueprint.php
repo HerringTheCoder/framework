@@ -1218,6 +1218,50 @@ class Blueprint
     }
 
     /**
+     * Create a new box column on the table.
+     *
+     * @param  string  $column
+     * @return \Illuminate\Database\Schema\ColumnDefinition
+     */
+    public function box($column)
+    {
+        return $this->addColumn('box', $column);
+    }
+
+    /**
+     * Create a new path column on the table.
+     *
+     * @param  string  $column
+     * @return \Illuminate\Database\Schema\ColumnDefinition
+     */
+    public function path($column)
+    {
+        return $this->addColumn('path', $column);
+    }
+
+    /**
+     * Create a new circle column on the table.
+     *
+     * @param  string  $column
+     * @return \Illuminate\Database\Schema\ColumnDefinition
+     */
+    public function circle($column)
+    {
+        return $this->addColumn('circle', $column);
+    }
+
+    /**
+     * Create a new line segment column on the table.
+     *
+     * @param  string  $column
+     * @return \Illuminate\Database\Schema\ColumnDefinition
+     */
+    public function lseg($column)
+    {
+        return $this->addColumn('lseg', $column);
+    }
+
+    /**
      * Create a new geometrycollection column on the table.
      *
      * @param  string  $column
@@ -1259,17 +1303,6 @@ class Blueprint
     public function multiPolygon($column)
     {
         return $this->addColumn('multipolygon', $column);
-    }
-
-    /**
-     * Create a new multipolygon column on the table.
-     *
-     * @param  string  $column
-     * @return \Illuminate\Database\Schema\ColumnDefinition
-     */
-    public function multiPolygonZ($column)
-    {
-        return $this->addColumn('multipolygonz', $column);
     }
 
     /**
